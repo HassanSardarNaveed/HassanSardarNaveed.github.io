@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<!-- Mirrored from www.learnjavaonline.org/cn/编译和运行参数 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jul 2024 13:37:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>编译和运行参数 - Learn Java - Free Interactive Java Tutorial</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="learnjavaonline.org is a free interactive Java tutorial for people who want to learn Java, fast." />
+    <meta name="keywords" content="Learn,Java,Tutorial,Interactive,Free" />
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="编译和运行参数 - Learn Java - Free
+    Interactive Java Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:image" content="../static/img/share-logos/learnjavaonline.org.png" />
+
+    <link rel="icon" href="../static/img/favicons/learnjavaonline.org.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/codemirror.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-light-media.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-dark-media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-light.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/learnpython.css"/>
+
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="../index.html">
+        <img src="../static/img/favicons/learnjavaonline.org.ico" style="height: 24px">
+        learnjavaonline.org
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.learnx.org/">Certify</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    
+		                <a class="dropdown-item" href="https://www.learnpython.org/">Python</a>
+                    
+		                <a class="dropdown-item disabled" href="../index.html">Java</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-html.org/">HTML</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-golang.org/">Go</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-c.org/">C</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-cpp.org/">C++</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-js.org/">JavaScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-ts.org/">TypeScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-php.org/">PHP</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnshell.org/">Shell</a>
+                    
+		                <a class="dropdown-item" href="https://www.learncs.org/">C#</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-perl.org/">Perl</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnrubyonline.org/">Ruby</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnscala.org/">Scala</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnsqlonline.org/">SQL</a>
+                    
+
+                </div>
+              </li>
+
+
+
+
+
+
+        
+
+        </ul>
+
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="../static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    
+		                <a class="dropdown-item disabled" href="index.html">普通话</a><br>
+		            
+		                <a class="dropdown-item" href="../en/index.html">English</a><br>
+		            
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="padding-top: 10px">
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star"  aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials/fork" data-icon="octicon-repo-forked" aria-label="Fork ronreiter/interactive-tutorials on GitHub">Fork</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnpython.org/">Python</a></li>
+            
+                <li class="nav-item"><a class="nav-link active" href="../index.html">Java</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-html.org/">HTML</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-golang.org/">Go</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-c.org/">C</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-cpp.org/">C++</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-js.org/">JavaScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-ts.org/">TypeScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-php.org/">PHP</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnshell.org/">Shell</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learncs.org/">C#</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-perl.org/">Perl</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnrubyonline.org/">Ruby</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnscala.org/">Scala</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnsqlonline.org/">SQL</a></li>
+            
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" id="main">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-none d-lg-block">
+            <a href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython" target="_blank">
+              <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+            </a>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+            
+                <ul class="breadcrumb" style="margin-top: 10px">
+                    
+                        <li><a href="Welcome.html">Welcome</a> <span
+                                class="divider mr-1">/</span></li>
+                    
+                    <li class="active">编译和运行参数</li>
+                </ul>
+            
+
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+
+        <div class="col col-lg-10">
+            
+
+            <div id="inner-text">
+                
+                    <h1>编译和运行参数</h1>
+                    <hr/>
+                
+                <p>这一节主要讲在家里怎么也能运行Java，了解它怎么执行的</p>
+<p>如果你要创建一个简单的程序并打印在屏幕，那么你需要编译你的代码并运行它。</p>
+<p>你不用管你用的是Linux, Mac 或者 Windows. 你需要一个命令处理界面执行如下的命令来编译运行Java</p>
+<ul>
+<li>java (or java.exe)</li>
+<li>javac (or javac.exe)</li>
+</ul>
+<p>你首先需要下载安装一个JDK(Java Development Kit).</p>
+<p>如果你使用前面章节的代码你可以创建一个这个文件 MyFirstClass.java, 然后编译执行它:</p>
+<pre><code>javac MyFirstClass.java
+</code></pre>
+<p>这会生成一个叫 MyFirstClass.class 的文件，它保存了编译后的代码.</p>
+<p>然后执行它, 使用它的类名做参数 (不是文件名!)</p>
+<h5>错误的写法</h5>
+<pre><code>java MyFirstClass.class
+</code></pre>
+<h5>正确的写法!</h5>
+<pre><code>java MyFirstClass
+</code></pre>
+<h3>参数化</h3>
+<p>main方法可以传入一个字符串数组, 可以通过命名行传入.</p>
+<p>数组有个长度length的属性（可以打印出来 数组包含了几个东西）.</p>
+<p>例如</p>
+<pre><code>public class Arguments {
+    public static void main(String[] args) {
+        for (int i = 0; i &lt; args.length; i++) {
+            System.out.println(args[i]);
+        }
+    }
+}
+</code></pre>
+<p>然后编译 并 运行（含参数）:</p>
+<pre><code>javac Arguments.java
+java Arguments arg0 arg1 arg2
+</code></pre>
+<h3>Exercise</h3>
+<p>造一个打印我们自己参数的代码. 写在注释部分</p>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col">
+                    <button id="start-exercise" class="btn btn-success pull-left mt-2" onclick="reset()">
+                        <i class="fas fa-play"></i> Start Exercise
+                    </button>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="row mt-2 mb-2">
+                <div class="col">
+                    
+                        <a class="btn btn-primary pull-left" href="%e5%af%b9%e8%b1%a1.html">
+                            <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                        </a>
+                    
+
+
+                    
+                        <a class="btn btn-primary pull-right" href="%e7%bb%a7%e6%89%bf.html">
+                            Next Tutorial <i class="fas fa-angle-double-right"></i>
+                        </a>
+
+                    
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col">
+                  <a href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython" target="_blank">
+                      <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+                  </a>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-2 d-none d-lg-block mt-2">
+            <div id="google-ad-right">
+                
+
+                <h4>Sponsors</h4>
+                <hr/>
+
+
+
+                <div class="mt-3">
+                  <a href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython" target="_blank">
+                    <img src="../static/img/banners/cfk/promo_high.png" style="width: 100%; margin-bottom: 10px"/>
+                  </a>
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="mt-3">
+                    <a href="https://digitalocean.com/" target="_blank" >
+                        <img src="../static/img/banners/digital-ocean.svg" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <div class="mt-3">
+                    <a href="http://www.spoj.com/?utm_campaign=permanent&amp;utm_medium=banner&amp;utm_source=learnx" target="_blank">
+                        <img src="../static/img/logos/spoj.png" style="width: 160px" alt="Sphere Engine">
+                    </a>
+                </div>
+                <div class="mt-3">
+
+                  <a href="#" data-toggle="modal" data-target="#masterschoolModal">
+                    <img src="../static/img/masterschool.png" style="width: 150px;"/>
+                  </a>
+                </div>
+                <h4 class="mt-3">Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    
+                        <div>
+                            <a href="Hello%2c_World%21.html">Hello, World!</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e5%8f%98%e9%87%8f%e5%92%8c%e7%b1%bb%e5%9e%8b.html">变量和类型</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%9d%a1%e4%bb%b6%e8%af%ad%e5%8f%a5.html">条件语句</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%95%b0%e7%bb%84.html">数组</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e5%be%aa%e7%8e%af%e8%af%ad%e5%8f%a5.html">循环语句</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%96%b9%e6%b3%95.html">方法</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e5%af%b9%e8%b1%a1.html">对象</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e7%bc%96%e8%af%91%e5%92%8c%e8%bf%90%e8%a1%8c%e5%8f%82%e6%95%b0.html">编译和运行参数</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e7%bb%a7%e6%89%bf.html">继承</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%8d%95%e8%8e%b7%e5%bc%82%e5%b8%b8.html">捕获异常</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%8a%bd%e8%b1%a1%e7%b1%bb.html">抽象类</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%8e%a5%e5%8f%a3.html">接口</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e4%bd%bf%e7%94%a8%e6%b3%9b%e5%9e%8b.html">使用泛型</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e9%9b%86%e5%90%88.html">集合</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e8%87%aa%e5%8a%a8%e8%a3%85%e7%ae%b1.html">自动装箱</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e5%bc%82%e5%b8%b8.html">异常</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%b3%9b%e5%9e%8b%e7%b1%bb%e5%9e%8b.html">泛型类型</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%b5%81.html">流</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e5%90%88%e4%bd%9c%e6%b5%81%e7%a8%8b.html">合作流程</a>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- row -->
+
+</div>
+
+
+<div class="bg-light mb-5 mt-5">
+
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>Copyright &copy; learnjavaonline.org. Read our <a href='../tos.html'>Terms of Use</a> and <a href='../privacy.html'>Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer id="dock">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-sm-12 col-lg-6 mt-3">
+                <div class="code-window">
+                    <div class="row mb-2">
+                        <div class="col-2">
+                            <h5>Code</h5>
+                        </div>
+
+                        <div class="col-10 text-right">
+                            <button id="run-button" class="btn btn-success btn-sm" onclick="execute()">
+                                <i class="fas fa-play"></i> Run
+                            </button>
+                            <button id="reset-button" onclick="reset()" class="btn btn-primary btn-sm">
+                                <i class="fas fa-sync-alt"></i> Reset</button>
+                            <button id="solution-button" onclick="showSolution()" class="btn btn-primary btn-sm">Solution</button>
+
+                            <button id="toggle-dock-button" class="btn btn-primary btn-sm" onclick="toggleMinimize()">
+                                <span class="maximized">
+                                    <i class="fas fa-angle-double-down"></i>
+                                </span>
+                                <span class="minimized">
+                                    <i class="fas fa-angle-double-up"></i>
+                                </span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="row footer-toggle">
+                        <div class="col">
+                            <textarea id="code">public class Arguments {
+    public static void main(String[] args) {
+        // 注释部分  你的代码写在这
+
+    }
+}</textarea>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 mt-3">
+                <div class="output-window">
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <h5>Output</h5>
+                        </div>
+                        <div class="col-9 text-right">
+                            <button id="expected-output-button" class="btn btn-primary btn-sm" onclick="showExpected()">
+                                Expected Output
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <div class="row footer-toggle">
+                        <div class="col">
+                            <div id="text-output">
+                                <textarea id="output"></textarea>
+                                <div class="powered-by-sphere">
+                                    Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine &trade;</a>
+                                </div>
+                            </div>
+                            <iframe id="html-output"
+                                    style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
+                            <iframe id="expected-output"
+                                    style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+<script
+  src="../../code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <style>
+    .invalid-tooltip {
+        top: auto;
+    }
+</style>
+
+<!-- Modal -->
+<div class="modal fade" id="cfkModal" tabindex="-1" role="dialog" aria-labelledby="cfkModalTitle"
+     aria-hidden="true" style="border-radius: 10px">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 692px">
+    <div class="modal-content" style="overflow: hidden; border-radius: 10px">
+
+      <div class="modal-body" style="padding: 0">
+        <div style="overflow-y: scroll; height: 500px">
+          <div style="display: flex">
+            <div style="flex: 1; padding: 20px; display: flex; flex-direction: column">
+              <img src="../static/img/cfk.png" style="display: block; width: 200px; margin: 0 auto 30px auto"/>
+              <p><strong>Coding for Kids</strong> is an online interactive tutorial that teaches your kids how to code while playing!</p>
+              <p>Receive a 50% discount code by using the promo code:</p>
+              <p class="text-lg-center"><code style="font-size: 20px">2FRHUGWXF0</code></p>
+              <p>Start now and play the first chapter for free, without signing up.</p>
+              <div style="flex: 1"></div>
+              <a href="https://codingforkids.io/" target="_blank" type="button" class="btn btn-primary btn-lg">Play Now for Free!</a>
+            </div>
+            <div>
+              <img src="../static/img/cfk-promo.png" style="display: block; height: 500px"/>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+  $('#cfkModal').on('hidden.bs.modal', function () {
+    localStorage.setItem("showcfkModal", "false");
+  });
+
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      const showcfkModal = localStorage.getItem("showcfkModal");
+      if (showcfkModal === "false") {
+        return;
+      } else {
+        $('#cfkModal').modal('show');
+        ga('send', 'event', {
+          eventCategory: 'cfk',
+          eventAction: 'popup',
+        });
+      }
+
+    }, false);
+  })();
+</script>
+
+
+
+
+
+<script src="../static/js/prism.js"></script>
+
+<script async defer src="../../buttons.github.io/buttons.js"></script>
+
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="../static/js/codemirror/codemirror.js"></script>
+<script src="../static/js/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="../static/js/codemirror/mode/clike/clike.js"></script>
+
+
+
+
+
+
+
+
+
+<script src="../static/js/codemirror/mode/xml/xml.js"></script>
+<script src="../static/js/codemirror/mode/css/css.js"></script>
+<script src="../static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="../static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/bootbox.min.js"></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22741967-17', 'learnjavaonline.org');
+  ga('create', 'UA-22741967-4', 'learnjavaonline.org');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<script>
+    var domainData = {"language": "java", "language_id": 10, "codemirror_mode": "text/x-java", "prism_mode": "language-java", "analytics": "UA-22741967-4", "language_uppercase": "Java", "default_code": "// Welcome to the Interactive Java Tutorial.\n// Start by choosing a chapter and\n// write your code in this window.\n\npublic class Main {\n\n    public static void main(String[] args) {\n\n        System.out.println(\"Hello, World!\");\n\n  }\n\n}\n", "container_word": "class", "container_indent": "        ", "container": "public class Main {\n    public static void main(String[] args) {\n{code}\n    }\n}\n", "namespace": "learnjavaonline.org", "full_url": "https://www.learnjavaonline.org", "contact_email": "admin@learnjavaonline.org", "support_email": "support@learnjavaonline.org", "logo": "/static/img/logos/learnjavaonline.org.png", "share_logo": "/static/img/share-logos/learnjavaonline.org.png", "favicon": "/static/img/favicons/learnjavaonline.org.ico", "styled_domain": "learnjavaonline.org", "sender": "learnjavaonline.org <admin@learnjavaonline.org>", "courses": [{"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/533682_c10c_3.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.533682&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.533682&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/533682_c10c_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.533682&type=2&subid=0\" >", "link_id": "533682", "link_name": "Complete Java Masterclass", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.533682&type=2&subid=0", "retail_price": 195.0}, {"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/1309166_f0f6_5.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1309166&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fbecome-a-junior-java-software-developer%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1309166&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fbecome-a-junior-java-software-developer%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1309166_f0f6_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1309166&type=2&subid=0\" >", "link_id": "1309166", "link_name": "Become a Junior Java Software Developer", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1309166&type=2&subid=0", "retail_price": 175.0}, {"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/358540_d06b_6.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.358540&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-in-depth-become-a-complete-java-engineer%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.358540&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-in-depth-become-a-complete-java-engineer%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/358540_d06b_6.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.358540&type=2&subid=0\" >", "link_id": "358540", "link_name": "Java In-Depth: Become a Complete Java Engineer!", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.358540&type=2&subid=0", "retail_price": 120.0}, {"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/1228490_9cb9.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1228490&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-for-absolute-beginners%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1228490&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-for-absolute-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1228490_9cb9.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1228490&type=2&subid=0\" >", "link_id": "1228490", "link_name": "Java for Absolute Beginners", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1228490&type=2&subid=0", "retail_price": 20.0}, {"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/618736_237d_5.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.618736&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjsp-tutorial%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.618736&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjsp-tutorial%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/618736_237d_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.618736&type=2&subid=0\" >", "link_id": "618736", "link_name": "JSP, Servlets and JDBC for Beginners: Build a Database App", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.618736&type=2&subid=0", "retail_price": 95.0}], "language_code": "cn"};
+    var nextChapter = "/cn/继承";
+    var previousChapter = "/cn/对象";
+    var backChapter = "/cn/Welcome";
+    var tutorialData = {"page_title": "\u7f16\u8bd1\u548c\u8fd0\u884c\u53c2\u6570", "text": "<p>\u8fd9\u4e00\u8282\u4e3b\u8981\u8bb2\u5728\u5bb6\u91cc\u600e\u4e48\u4e5f\u80fd\u8fd0\u884cJava\uff0c\u4e86\u89e3\u5b83\u600e\u4e48\u6267\u884c\u7684</p>\n<p>\u5982\u679c\u4f60\u8981\u521b\u5efa\u4e00\u4e2a\u7b80\u5355\u7684\u7a0b\u5e8f\u5e76\u6253\u5370\u5728\u5c4f\u5e55\uff0c\u90a3\u4e48\u4f60\u9700\u8981\u7f16\u8bd1\u4f60\u7684\u4ee3\u7801\u5e76\u8fd0\u884c\u5b83\u3002</p>\n<p>\u4f60\u4e0d\u7528\u7ba1\u4f60\u7528\u7684\u662fLinux, Mac \u6216\u8005 Windows. \u4f60\u9700\u8981\u4e00\u4e2a\u547d\u4ee4\u5904\u7406\u754c\u9762\u6267\u884c\u5982\u4e0b\u7684\u547d\u4ee4\u6765\u7f16\u8bd1\u8fd0\u884cJava</p>\n<ul>\n<li>java (or java.exe)</li>\n<li>javac (or javac.exe)</li>\n</ul>\n<p>\u4f60\u9996\u5148\u9700\u8981\u4e0b\u8f7d\u5b89\u88c5\u4e00\u4e2aJDK(Java Development Kit).</p>\n<p>\u5982\u679c\u4f60\u4f7f\u7528\u524d\u9762\u7ae0\u8282\u7684\u4ee3\u7801\u4f60\u53ef\u4ee5\u521b\u5efa\u4e00\u4e2a\u8fd9\u4e2a\u6587\u4ef6 MyFirstClass.java, \u7136\u540e\u7f16\u8bd1\u6267\u884c\u5b83:</p>\n<pre><code>javac MyFirstClass.java\n</code></pre>\n<p>\u8fd9\u4f1a\u751f\u6210\u4e00\u4e2a\u53eb MyFirstClass.class \u7684\u6587\u4ef6\uff0c\u5b83\u4fdd\u5b58\u4e86\u7f16\u8bd1\u540e\u7684\u4ee3\u7801.</p>\n<p>\u7136\u540e\u6267\u884c\u5b83, \u4f7f\u7528\u5b83\u7684\u7c7b\u540d\u505a\u53c2\u6570 (\u4e0d\u662f\u6587\u4ef6\u540d!)</p>\n<h5>\u9519\u8bef\u7684\u5199\u6cd5</h5>\n<pre><code>java MyFirstClass.class\n</code></pre>\n<h5>\u6b63\u786e\u7684\u5199\u6cd5!</h5>\n<pre><code>java MyFirstClass\n</code></pre>\n<h3>\u53c2\u6570\u5316</h3>\n<p>main\u65b9\u6cd5\u53ef\u4ee5\u4f20\u5165\u4e00\u4e2a\u5b57\u7b26\u4e32\u6570\u7ec4, \u53ef\u4ee5\u901a\u8fc7\u547d\u540d\u884c\u4f20\u5165.</p>\n<p>\u6570\u7ec4\u6709\u4e2a\u957f\u5ea6length\u7684\u5c5e\u6027\uff08\u53ef\u4ee5\u6253\u5370\u51fa\u6765 \u6570\u7ec4\u5305\u542b\u4e86\u51e0\u4e2a\u4e1c\u897f\uff09.</p>\n<p>\u4f8b\u5982</p>\n<pre><code>public class Arguments {\n    public static void main(String[] args) {\n        for (int i = 0; i &lt; args.length; i++) {\n            System.out.println(args[i]);\n        }\n    }\n}\n</code></pre>\n<p>\u7136\u540e\u7f16\u8bd1 \u5e76 \u8fd0\u884c\uff08\u542b\u53c2\u6570\uff09:</p>\n<pre><code>javac Arguments.java\njava Arguments arg0 arg1 arg2\n</code></pre>\n<h3>Exercise</h3>\n<p>\u9020\u4e00\u4e2a\u6253\u5370\u6211\u4eec\u81ea\u5df1\u53c2\u6570\u7684\u4ee3\u7801. \u5199\u5728\u6ce8\u91ca\u90e8\u5206</p>", "code": "public class Arguments {\n    public static void main(String[] args) {\n        // \u6ce8\u91ca\u90e8\u5206  \u4f60\u7684\u4ee3\u7801\u5199\u5728\u8fd9\n\n    }\n}", "back_chapter": "Welcome", "previous_chapter": "\u5bf9\u8c61", "next_chapter": "\u7ee7\u627f", "links": [], "output": "// The following is sample terminal output that\n// displays the contents of the .java file\n// we have written (\u4f7f\u7528 cat \u547d\u4ee4),\n// compiles and runs it with arguments.\n\n$ cat Arguments.java\npublic class Arguments {\n    public static void main(String[] args) {\n        for (int i = 0; i < args.length; i++) {\n            System.out.println(args[i]);\n        }\n    }\n}\n$ javac Arguments.java\n$ java Arguments arg0 arg1 arg2 \narg0\narg1\narg2\n$ ", "solution": "", "is_tutorial": true};
+</script>
+
+<script src="../static/js/learnpython.js"></script>
+
+
+</body>
+
+<!-- Mirrored from www.learnjavaonline.org/cn/编译和运行参数 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jul 2024 13:37:05 GMT -->
+</html>
