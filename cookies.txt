@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.learnjavaonline.org	TRUE	/	FALSE	1999999999	session	eyJ1aWQiOnsiIGIiOiJOVE13WW1ObE5ETXdaV1UwWVRFeFkySTJaV05qWWpVM1pUSmhNbU5qWm1RPSJ9fQ.ZqT3yw.flH4bG7XBII7WBq49aDRB0Icfs8
+.www.learnjavaonline.org	TRUE	/	FALSE	1999999999	__cf_bm	Tb1sQ6AE64ZTibyI8.or5YzkjvDXHf8jjSPrh1h7WX0-1722087424-1.0.1.1-_PMvBYqrJwDYhNYacYNPukB.ug8K4wy2Wdf.MlBg7Tq2UZyjWiKyltLoAEYYfjgsTtcIQcyIOL3AKOt5npsiNQ
+www.learnjavaonline.org	TRUE	/	FALSE	1999999999	SameSite	None
+
