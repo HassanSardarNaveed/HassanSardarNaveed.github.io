@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<!-- Mirrored from www.learnjavaonline.org/cn/变量和类型 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jul 2024 13:37:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>变量和类型 - Learn Java - Free Interactive Java Tutorial</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="learnjavaonline.org is a free interactive Java tutorial for people who want to learn Java, fast." />
+    <meta name="keywords" content="Learn,Java,Tutorial,Interactive,Free" />
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="变量和类型 - Learn Java - Free
+    Interactive Java Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="../index.html" />
+    <meta property="og:image" content="../static/img/share-logos/learnjavaonline.org.png" />
+
+    <link rel="icon" href="../static/img/favicons/learnjavaonline.org.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/codemirror.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-light-media.css">
+    <link rel="stylesheet" href="../static/css/theme/xq-dark-media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-light.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/prism-dark.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/learnpython.css"/>
+
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="../index.html">
+        <img src="../static/img/favicons/learnjavaonline.org.ico" style="height: 24px">
+        learnjavaonline.org
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.learnx.org/">Certify</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    
+		                <a class="dropdown-item" href="https://www.learnpython.org/">Python</a>
+                    
+		                <a class="dropdown-item disabled" href="../index.html">Java</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-html.org/">HTML</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-golang.org/">Go</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-c.org/">C</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-cpp.org/">C++</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-js.org/">JavaScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-ts.org/">TypeScript</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-php.org/">PHP</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnshell.org/">Shell</a>
+                    
+		                <a class="dropdown-item" href="https://www.learncs.org/">C#</a>
+                    
+		                <a class="dropdown-item" href="https://www.learn-perl.org/">Perl</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnrubyonline.org/">Ruby</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnscala.org/">Scala</a>
+                    
+		                <a class="dropdown-item" href="https://www.learnsqlonline.org/">SQL</a>
+                    
+
+                </div>
+              </li>
+
+
+
+
+
+
+        
+
+        </ul>
+
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="../static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    
+		                <a class="dropdown-item disabled" href="index.html">普通话</a><br>
+		            
+		                <a class="dropdown-item" href="../en/index.html">English</a><br>
+		            
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="padding-top: 10px">
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star"  aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials/fork" data-icon="octicon-repo-forked" aria-label="Fork ronreiter/interactive-tutorials on GitHub">Fork</a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+    </div>
+
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnpython.org/">Python</a></li>
+            
+                <li class="nav-item"><a class="nav-link active" href="../index.html">Java</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-html.org/">HTML</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-golang.org/">Go</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-c.org/">C</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-cpp.org/">C++</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-js.org/">JavaScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-ts.org/">TypeScript</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-php.org/">PHP</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnshell.org/">Shell</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learncs.org/">C#</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learn-perl.org/">Perl</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnrubyonline.org/">Ruby</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnscala.org/">Scala</a></li>
+            
+                <li class="nav-item"><a class="nav-link" href="https://www.learnsqlonline.org/">SQL</a></li>
+            
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" id="main">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-none d-lg-block">
+            <a href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython" target="_blank">
+              <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+            </a>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+            
+                <ul class="breadcrumb" style="margin-top: 10px">
+                    
+                        <li><a href="Welcome.html">Welcome</a> <span
+                                class="divider mr-1">/</span></li>
+                    
+                    <li class="active">变量和类型</li>
+                </ul>
+            
+
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+
+        <div class="col col-lg-10">
+            
+
+            <div id="inner-text">
+                
+                    <h1>变量和类型</h1>
+                    <hr/>
+                
+                <p>尽管Java是面向对象的，并非所有类型都是对象。它们叫做基本类型 primitives。.</p>
+<p>下面列出了java中的基本类型:</p>
+<ul>
+<li><code>byte</code> (number, 1 byte)</li>
+<li><code>short</code> (number, 2 bytes)</li>
+<li><code>int</code> (number, 4 bytes)</li>
+<li><code>long</code> (number, 8 bytes)</li>
+<li><code>float</code> (float number, 4 bytes)</li>
+<li><code>double</code> (float number, 8 bytes)</li>
+<li><code>char</code> (a character, 2 bytes)</li>
+<li><code>boolean</code> (true or false, 1 byte)</li>
+</ul>
+<p>Java是一种强类型语言，这意味着我们在使用变量前需要先定义它们的类型。</p>
+<h3>Numbers</h3>
+<p>声明一个数字的语法:</p>
+<pre><code>int myNumber;
+myNumber = 5;
+</code></pre>
+<p>或者组合在一起:</p>
+<pre><code>int myNumber = 5;
+</code></pre>
+<p>定义一个双精度浮点数的语法:</p>
+<pre><code>double d = 4.5;
+d = 3.0;
+</code></pre>
+<p>如果要转变为单精度浮点数:</p>
+<pre><code>float f = (float) 4.5;
+</code></pre>
+<p>也可以这样写:</p>
+<pre><code>float f = 4.5f (f is a shorter way of casting float)
+</code></pre>
+<h3>字符和字符串</h3>
+<p>在Java中，一个字符是它自己的类型，而不是简单的一个数字，所以它不和其他语言一样把ASCII值放在里面，有一个特殊的语法叫字符类型：、</p>
+<pre><code>char c = 'g';
+</code></pre>
+<p><code>String</code> 不是一个基本类型.是一个真正的类 但是java语言对这个类有些特殊处理</p>
+<p>下面介绍一些使用 字符串的列子：</p>
+<pre><code>// 使用构造器创建一个字符串
+String s1 = new String("Who let the dogs out?");
+// 使用双引号 "" 创建一个字符串，所以没必要用上面的方法.
+String s2 = "Who who who who!";
+// java定义了 + 加号运算两个字符串就是把两个字符串联合起来
+String s3 = s1 + s2;
+</code></pre>
+<p>处理字符串 和 基本类型 + 号有处理  其他地方java对+号没有特殊处理（重载）</p>
+<p>你也可以字符串和基本类型做连接操作:</p>
+<pre><code>int num = 5;
+String s = "I have " + num + " cookies"; //不要把原型变量用""包起来.
+</code></pre>
+<h3>boolean 布尔值</h3>
+<p>任何比较操作都会返回 <code>boolean</code> 布尔值， boolean类型的值可以定义为 <code>true</code> or <code>false</code>.</p>
+<pre><code>boolean b = false;
+b = true;
+
+boolean toBe = false;
+b = toBe || !toBe;
+if (b) {
+    System.out.println(toBe);
+}
+
+int children = 0;
+b = children; // 不支持，会报错
+if (children) { // 不支持，会报错
+    // 不支持，会报错
+}
+</code></pre>
+<h2>Exercise</h2>
+<p>造不同的基本类型数据. 然后放入String字符串中打印在屏幕上:
+H3110 w0r1d 2.0 true</p>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col">
+                    <button id="start-exercise" class="btn btn-success pull-left mt-2" onclick="reset()">
+                        <i class="fas fa-play"></i> Start Exercise
+                    </button>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="row mt-2 mb-2">
+                <div class="col">
+                    
+                        <a class="btn btn-primary pull-left" href="Hello%2c_World%21-2.html">
+                            <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                        </a>
+                    
+
+
+                    
+                        <a class="btn btn-primary pull-right" href="%e6%9d%a1%e4%bb%b6%e8%af%ad%e5%8f%a5.html">
+                            Next Tutorial <i class="fas fa-angle-double-right"></i>
+                        </a>
+
+                    
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col">
+                  <a href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython" target="_blank">
+                      <img src="../static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+                  </a>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-2 d-none d-lg-block mt-2">
+            <div id="google-ad-right">
+                
+
+                <h4>Sponsors</h4>
+                <hr/>
+
+
+
+                <div class="mt-3">
+                  <a href="https://codingforkids.io/?utm_source=learnpython&amp;utm_medium=banner&amp;utm_campaign=cfk-learnpython&amp;utm_id=learnpython" target="_blank">
+                    <img src="../static/img/banners/cfk/promo_high.png" style="width: 100%; margin-bottom: 10px"/>
+                  </a>
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="mt-3">
+                    <a href="https://digitalocean.com/" target="_blank" >
+                        <img src="../static/img/banners/digital-ocean.svg" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <div class="mt-3">
+                    <a href="http://www.spoj.com/?utm_campaign=permanent&amp;utm_medium=banner&amp;utm_source=learnx" target="_blank">
+                        <img src="../static/img/logos/spoj.png" style="width: 160px" alt="Sphere Engine">
+                    </a>
+                </div>
+                <div class="mt-3">
+
+                  <a href="#" data-toggle="modal" data-target="#masterschoolModal">
+                    <img src="../static/img/masterschool.png" style="width: 150px;"/>
+                  </a>
+                </div>
+                <h4 class="mt-3">Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    
+                        <div>
+                            <a href="Hello%2c_World%21.html">Hello, World!</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e5%8f%98%e9%87%8f%e5%92%8c%e7%b1%bb%e5%9e%8b.html">变量和类型</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%9d%a1%e4%bb%b6%e8%af%ad%e5%8f%a5.html">条件语句</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%95%b0%e7%bb%84.html">数组</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e5%be%aa%e7%8e%af%e8%af%ad%e5%8f%a5.html">循环语句</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%96%b9%e6%b3%95.html">方法</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e5%af%b9%e8%b1%a1.html">对象</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e7%bc%96%e8%af%91%e5%92%8c%e8%bf%90%e8%a1%8c%e5%8f%82%e6%95%b0.html">编译和运行参数</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e7%bb%a7%e6%89%bf.html">继承</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%8d%95%e8%8e%b7%e5%bc%82%e5%b8%b8.html">捕获异常</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%8a%bd%e8%b1%a1%e7%b1%bb.html">抽象类</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%8e%a5%e5%8f%a3.html">接口</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e4%bd%bf%e7%94%a8%e6%b3%9b%e5%9e%8b.html">使用泛型</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e9%9b%86%e5%90%88.html">集合</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e8%87%aa%e5%8a%a8%e8%a3%85%e7%ae%b1.html">自动装箱</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e5%bc%82%e5%b8%b8.html">异常</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%b3%9b%e5%9e%8b%e7%b1%bb%e5%9e%8b.html">泛型类型</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e6%b5%81.html">流</a>
+                        </div>
+                    
+                        <div>
+                            <a href="%e5%90%88%e4%bd%9c%e6%b5%81%e7%a8%8b.html">合作流程</a>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- row -->
+
+</div>
+
+
+<div class="bg-light mb-5 mt-5">
+
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>Copyright &copy; learnjavaonline.org. Read our <a href='../tos.html'>Terms of Use</a> and <a href='../privacy.html'>Privacy Policy</a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer id="dock">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-sm-12 col-lg-6 mt-3">
+                <div class="code-window">
+                    <div class="row mb-2">
+                        <div class="col-2">
+                            <h5>Code</h5>
+                        </div>
+
+                        <div class="col-10 text-right">
+                            <button id="run-button" class="btn btn-success btn-sm" onclick="execute()">
+                                <i class="fas fa-play"></i> Run
+                            </button>
+                            <button id="reset-button" onclick="reset()" class="btn btn-primary btn-sm">
+                                <i class="fas fa-sync-alt"></i> Reset</button>
+                            <button id="solution-button" onclick="showSolution()" class="btn btn-primary btn-sm">Solution</button>
+
+                            <button id="toggle-dock-button" class="btn btn-primary btn-sm" onclick="toggleMinimize()">
+                                <span class="maximized">
+                                    <i class="fas fa-angle-double-down"></i>
+                                </span>
+                                <span class="minimized">
+                                    <i class="fas fa-angle-double-up"></i>
+                                </span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="row footer-toggle">
+                        <div class="col">
+                            <textarea id="code">public class Main {
+    public static void main(String[] args) {
+        byte zero = 0;
+        String output = &#34;W&#34; + zero + &#34;w&#34;;
+        System.out.println(output);
+    }
+}</textarea>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 mt-3">
+                <div class="output-window">
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <h5>Output</h5>
+                        </div>
+                        <div class="col-9 text-right">
+                            <button id="expected-output-button" class="btn btn-primary btn-sm" onclick="showExpected()">
+                                Expected Output
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <div class="row footer-toggle">
+                        <div class="col">
+                            <div id="text-output">
+                                <textarea id="output"></textarea>
+                                <div class="powered-by-sphere">
+                                    Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine &trade;</a>
+                                </div>
+                            </div>
+                            <iframe id="html-output"
+                                    style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
+                            <iframe id="expected-output"
+                                    style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+<script
+  src="../../code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+  <style>
+    .invalid-tooltip {
+        top: auto;
+    }
+</style>
+
+<!-- Modal -->
+<div class="modal fade" id="cfkModal" tabindex="-1" role="dialog" aria-labelledby="cfkModalTitle"
+     aria-hidden="true" style="border-radius: 10px">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 692px">
+    <div class="modal-content" style="overflow: hidden; border-radius: 10px">
+
+      <div class="modal-body" style="padding: 0">
+        <div style="overflow-y: scroll; height: 500px">
+          <div style="display: flex">
+            <div style="flex: 1; padding: 20px; display: flex; flex-direction: column">
+              <img src="../static/img/cfk.png" style="display: block; width: 200px; margin: 0 auto 30px auto"/>
+              <p><strong>Coding for Kids</strong> is an online interactive tutorial that teaches your kids how to code while playing!</p>
+              <p>Receive a 50% discount code by using the promo code:</p>
+              <p class="text-lg-center"><code style="font-size: 20px">2FRHUGWXF0</code></p>
+              <p>Start now and play the first chapter for free, without signing up.</p>
+              <div style="flex: 1"></div>
+              <a href="https://codingforkids.io/" target="_blank" type="button" class="btn btn-primary btn-lg">Play Now for Free!</a>
+            </div>
+            <div>
+              <img src="../static/img/cfk-promo.png" style="display: block; height: 500px"/>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+  $('#cfkModal').on('hidden.bs.modal', function () {
+    localStorage.setItem("showcfkModal", "false");
+  });
+
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      const showcfkModal = localStorage.getItem("showcfkModal");
+      if (showcfkModal === "false") {
+        return;
+      } else {
+        $('#cfkModal').modal('show');
+        ga('send', 'event', {
+          eventCategory: 'cfk',
+          eventAction: 'popup',
+        });
+      }
+
+    }, false);
+  })();
+</script>
+
+
+
+
+
+<script src="../static/js/prism.js"></script>
+
+<script async defer src="../../buttons.github.io/buttons.js"></script>
+
+<link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+<script src="../static/js/codemirror/codemirror.js"></script>
+<script src="../static/js/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="../static/js/codemirror/mode/clike/clike.js"></script>
+
+
+
+
+
+
+
+
+
+<script src="../static/js/codemirror/mode/xml/xml.js"></script>
+<script src="../static/js/codemirror/mode/css/css.js"></script>
+<script src="../static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="../static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/bootbox.min.js"></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22741967-17', 'learnjavaonline.org');
+  ga('create', 'UA-22741967-4', 'learnjavaonline.org');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<script>
+    var domainData = {"language": "java", "language_id": 10, "codemirror_mode": "text/x-java", "prism_mode": "language-java", "analytics": "UA-22741967-4", "language_uppercase": "Java", "default_code": "// Welcome to the Interactive Java Tutorial.\n// Start by choosing a chapter and\n// write your code in this window.\n\npublic class Main {\n\n    public static void main(String[] args) {\n\n        System.out.println(\"Hello, World!\");\n\n  }\n\n}\n", "container_word": "class", "container_indent": "        ", "container": "public class Main {\n    public static void main(String[] args) {\n{code}\n    }\n}\n", "namespace": "learnjavaonline.org", "full_url": "https://www.learnjavaonline.org", "contact_email": "admin@learnjavaonline.org", "support_email": "support@learnjavaonline.org", "logo": "/static/img/logos/learnjavaonline.org.png", "share_logo": "/static/img/share-logos/learnjavaonline.org.png", "favicon": "/static/img/favicons/learnjavaonline.org.ico", "styled_domain": "learnjavaonline.org", "sender": "learnjavaonline.org <admin@learnjavaonline.org>", "courses": [{"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/533682_c10c_3.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.533682&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.533682&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/533682_c10c_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.533682&type=2&subid=0\" >", "link_id": "533682", "link_name": "Complete Java Masterclass", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.533682&type=2&subid=0", "retail_price": 195.0}, {"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/1309166_f0f6_5.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1309166&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fbecome-a-junior-java-software-developer%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1309166&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fbecome-a-junior-java-software-developer%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1309166_f0f6_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1309166&type=2&subid=0\" >", "link_id": "1309166", "link_name": "Become a Junior Java Software Developer", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1309166&type=2&subid=0", "retail_price": 175.0}, {"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/358540_d06b_6.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.358540&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-in-depth-become-a-complete-java-engineer%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.358540&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-in-depth-become-a-complete-java-engineer%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/358540_d06b_6.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.358540&type=2&subid=0\" >", "link_id": "358540", "link_name": "Java In-Depth: Become a Complete Java Engineer!", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.358540&type=2&subid=0", "retail_price": 120.0}, {"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/1228490_9cb9.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1228490&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-for-absolute-beginners%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1228490&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-for-absolute-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1228490_9cb9.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1228490&type=2&subid=0\" >", "link_id": "1228490", "link_name": "Java for Absolute Beginners", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1228490&type=2&subid=0", "retail_price": 20.0}, {"advertiser": "Udemy", "category": "Development", "image_url": "https://udemy-images.udemy.com/course/480x270/618736_237d_5.jpg", "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.618736&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjsp-tutorial%2F", "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.618736&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjsp-tutorial%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/618736_237d_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.618736&type=2&subid=0\" >", "link_id": "618736", "link_name": "JSP, Servlets and JDBC for Beginners: Build a Database App", "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.618736&type=2&subid=0", "retail_price": 95.0}], "language_code": "cn"};
+    var nextChapter = "/cn/条件语句";
+    var previousChapter = "/cn/Hello,_World!";
+    var backChapter = "/cn/Welcome";
+    var tutorialData = {"page_title": "\u53d8\u91cf\u548c\u7c7b\u578b", "text": "<p>\u5c3d\u7ba1Java\u662f\u9762\u5411\u5bf9\u8c61\u7684\uff0c\u5e76\u975e\u6240\u6709\u7c7b\u578b\u90fd\u662f\u5bf9\u8c61\u3002\u5b83\u4eec\u53eb\u505a\u57fa\u672c\u7c7b\u578b primitives\u3002.</p>\n<p>\u4e0b\u9762\u5217\u51fa\u4e86java\u4e2d\u7684\u57fa\u672c\u7c7b\u578b:</p>\n<ul>\n<li><code>byte</code> (number, 1 byte)</li>\n<li><code>short</code> (number, 2 bytes)</li>\n<li><code>int</code> (number, 4 bytes)</li>\n<li><code>long</code> (number, 8 bytes)</li>\n<li><code>float</code> (float number, 4 bytes)</li>\n<li><code>double</code> (float number, 8 bytes)</li>\n<li><code>char</code> (a character, 2 bytes)</li>\n<li><code>boolean</code> (true or false, 1 byte)</li>\n</ul>\n<p>Java\u662f\u4e00\u79cd\u5f3a\u7c7b\u578b\u8bed\u8a00\uff0c\u8fd9\u610f\u5473\u7740\u6211\u4eec\u5728\u4f7f\u7528\u53d8\u91cf\u524d\u9700\u8981\u5148\u5b9a\u4e49\u5b83\u4eec\u7684\u7c7b\u578b\u3002</p>\n<h3>Numbers</h3>\n<p>\u58f0\u660e\u4e00\u4e2a\u6570\u5b57\u7684\u8bed\u6cd5:</p>\n<pre><code>int myNumber;\nmyNumber = 5;\n</code></pre>\n<p>\u6216\u8005\u7ec4\u5408\u5728\u4e00\u8d77:</p>\n<pre><code>int myNumber = 5;\n</code></pre>\n<p>\u5b9a\u4e49\u4e00\u4e2a\u53cc\u7cbe\u5ea6\u6d6e\u70b9\u6570\u7684\u8bed\u6cd5:</p>\n<pre><code>double d = 4.5;\nd = 3.0;\n</code></pre>\n<p>\u5982\u679c\u8981\u8f6c\u53d8\u4e3a\u5355\u7cbe\u5ea6\u6d6e\u70b9\u6570:</p>\n<pre><code>float f = (float) 4.5;\n</code></pre>\n<p>\u4e5f\u53ef\u4ee5\u8fd9\u6837\u5199:</p>\n<pre><code>float f = 4.5f (f is a shorter way of casting float)\n</code></pre>\n<h3>\u5b57\u7b26\u548c\u5b57\u7b26\u4e32</h3>\n<p>\u5728Java\u4e2d\uff0c\u4e00\u4e2a\u5b57\u7b26\u662f\u5b83\u81ea\u5df1\u7684\u7c7b\u578b\uff0c\u800c\u4e0d\u662f\u7b80\u5355\u7684\u4e00\u4e2a\u6570\u5b57\uff0c\u6240\u4ee5\u5b83\u4e0d\u548c\u5176\u4ed6\u8bed\u8a00\u4e00\u6837\u628aASCII\u503c\u653e\u5728\u91cc\u9762\uff0c\u6709\u4e00\u4e2a\u7279\u6b8a\u7684\u8bed\u6cd5\u53eb\u5b57\u7b26\u7c7b\u578b\uff1a\u3001</p>\n<pre><code>char c = 'g';\n</code></pre>\n<p><code>String</code> \u4e0d\u662f\u4e00\u4e2a\u57fa\u672c\u7c7b\u578b.\u662f\u4e00\u4e2a\u771f\u6b63\u7684\u7c7b \u4f46\u662fjava\u8bed\u8a00\u5bf9\u8fd9\u4e2a\u7c7b\u6709\u4e9b\u7279\u6b8a\u5904\u7406</p>\n<p>\u4e0b\u9762\u4ecb\u7ecd\u4e00\u4e9b\u4f7f\u7528 \u5b57\u7b26\u4e32\u7684\u5217\u5b50\uff1a</p>\n<pre><code>// \u4f7f\u7528\u6784\u9020\u5668\u521b\u5efa\u4e00\u4e2a\u5b57\u7b26\u4e32\nString s1 = new String(\"Who let the dogs out?\");\n// \u4f7f\u7528\u53cc\u5f15\u53f7 \"\" \u521b\u5efa\u4e00\u4e2a\u5b57\u7b26\u4e32\uff0c\u6240\u4ee5\u6ca1\u5fc5\u8981\u7528\u4e0a\u9762\u7684\u65b9\u6cd5.\nString s2 = \"Who who who who!\";\n// java\u5b9a\u4e49\u4e86 + \u52a0\u53f7\u8fd0\u7b97\u4e24\u4e2a\u5b57\u7b26\u4e32\u5c31\u662f\u628a\u4e24\u4e2a\u5b57\u7b26\u4e32\u8054\u5408\u8d77\u6765\nString s3 = s1 + s2;\n</code></pre>\n<p>\u5904\u7406\u5b57\u7b26\u4e32 \u548c \u57fa\u672c\u7c7b\u578b + \u53f7\u6709\u5904\u7406  \u5176\u4ed6\u5730\u65b9java\u5bf9+\u53f7\u6ca1\u6709\u7279\u6b8a\u5904\u7406\uff08\u91cd\u8f7d\uff09</p>\n<p>\u4f60\u4e5f\u53ef\u4ee5\u5b57\u7b26\u4e32\u548c\u57fa\u672c\u7c7b\u578b\u505a\u8fde\u63a5\u64cd\u4f5c:</p>\n<pre><code>int num = 5;\nString s = \"I have \" + num + \" cookies\"; //\u4e0d\u8981\u628a\u539f\u578b\u53d8\u91cf\u7528\"\"\u5305\u8d77\u6765.\n</code></pre>\n<h3>boolean \u5e03\u5c14\u503c</h3>\n<p>\u4efb\u4f55\u6bd4\u8f83\u64cd\u4f5c\u90fd\u4f1a\u8fd4\u56de <code>boolean</code> \u5e03\u5c14\u503c\uff0c boolean\u7c7b\u578b\u7684\u503c\u53ef\u4ee5\u5b9a\u4e49\u4e3a <code>true</code> or <code>false</code>.</p>\n<pre><code>boolean b = false;\nb = true;\n\nboolean toBe = false;\nb = toBe || !toBe;\nif (b) {\n    System.out.println(toBe);\n}\n\nint children = 0;\nb = children; // \u4e0d\u652f\u6301\uff0c\u4f1a\u62a5\u9519\nif (children) { // \u4e0d\u652f\u6301\uff0c\u4f1a\u62a5\u9519\n    // \u4e0d\u652f\u6301\uff0c\u4f1a\u62a5\u9519\n}\n</code></pre>\n<h2>Exercise</h2>\n<p>\u9020\u4e0d\u540c\u7684\u57fa\u672c\u7c7b\u578b\u6570\u636e. \u7136\u540e\u653e\u5165String\u5b57\u7b26\u4e32\u4e2d\u6253\u5370\u5728\u5c4f\u5e55\u4e0a:\nH3110 w0r1d 2.0 true</p>", "code": "public class Main {\n    public static void main(String[] args) {\n        byte zero = 0;\n        String output = \"W\" + zero + \"w\";\n        System.out.println(output);\n    }\n}", "back_chapter": "Welcome", "previous_chapter": "Hello,_World!", "next_chapter": "\u6761\u4ef6\u8bed\u53e5", "links": [], "output": "H3110 w0r1d 2.0 true", "solution": "public class Main {\n    public static void main(String[] args) {\n        byte zero = 0;\n        short a = 3;\n        int b = 1;\n        char d = ' ';\n        float e = 2.0f;\n        boolean f = true;\n        String output = \"H\" + a + b + b + zero + d + \"w\" + zero + \"r\" + b + \"d\" + d + e + d + f;\n        System.out.println(output);\n    }\n}", "is_tutorial": true};
+</script>
+
+<script src="../static/js/learnpython.js"></script>
+
+
+</body>
+
+<!-- Mirrored from www.learnjavaonline.org/cn/变量和类型 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jul 2024 13:37:05 GMT -->
+</html>
